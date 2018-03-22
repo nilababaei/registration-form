@@ -4,59 +4,61 @@
   <meta charset="utf-8">
   <title>Registration Form</title>
   <link href="css/modules.css" rel="stylesheet">
-  <link href="css/type.css" rel="stylesheet">
   <link href="css/grid.css" rel="stylesheet">
+  <link href="css/type.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
 </head>
 <body>
-  <section class="island max-length">
-    <div class="pad-t-1-2">
-      <h1 class="not-bold push-none">Want to go to Mars?</h1>
-      <hr>
-      <p>We’re looking for super-awesome human beings who want to make the long trek to Mars for the adventure of a lifetime.</p>
+  <section class="max-length island">
+    <div class="pad-t">
+      <h1 class="not-bold push">Want to go to Mars?</h1>
+      <p class="mega">We’re looking for super-awesome human beings who want to make the long trek to Mars for the adventure of a lifetime.</p>
 
-      <form>
+      <form method="POST" action="https://formspree.io/bradlet@algonquincollege.com">
         <fieldset class="push-none">
           <legend class="push italic not-bold mega">Personal details</legend>
-          <div class="push">
-            <label class="kilo" for="name">Name</label>
-            <input id="name" required>
-          </div>
-          <div class="push">
-            <label class="kilo" for="age">Age</label>
-            <input id="age" type="number" required>
-          </div>
-          <div class="push">
-            <label class="kilo" for="email">Email</label>
-            <input id="email" type="email" required>
-          </div>
-          <div class="push">
-            <label class="kilo" for="subject">Physical fitness</label>
-            <select id="subject">
-              <option>Super-human</option>
-              <option>Fit as a fiddle</option>
-              <option>Not terribly strong</option>
-              <option>A little couch-potato-y</option>
-            </select>
+          <div class="grid">
+            <div class="psh unit xs-1 m-1 l-1-2 push">
+              <label class="kilo" for="name">Name</label>
+              <input id="name" name="name" required>
+            </div>
+            <div class="unit xs-1 m-1 l-1-2 push">
+              <label class="kilo" for="age">Age</label>
+              <input id="age" type="number" name="age" required>
+            </div>
+            <div class="psh unit xs-1 m-1 l-1-2 push">
+              <label class="kilo" for="email">Email</label>
+              <input id="email" type="email" name="email" required>
+            </div>
+            <div class="unit xs-1 m-1 l-1-2 push">
+              <label class="kilo" for="subject">Physical fitness</label>
+              <select id="subject" name="_subject">
+                <option>Super-human</option>
+                <option>Fit as a fiddle</option>
+                <option>Not terribly strong</option>
+                <option>A little couch-potato-y</option>
+              </select>
+            </div>
           </div>
           <div class="push">
             <label class="kilo" for="address">Address</label>
-            <input id="address" type="text" required>
+            <input id="address" type="text" name="address" required>
           </div>
         </fieldset>
       </form>
-      <form>
+      <form method="POST" action="https://formspree.io/bradlet@algonquincollege.com">
         <fieldset>
           <legend class="push italic not-bold mega">Mission statement</legend>
           <div class="push">
             <label class="kilo" for="details">Why do you want to go to Mars?</label>
-            <textarea id="details" required></textarea>
+            <textarea id="details" name="message" required></textarea>
           </div>
           <div class="push text-center">
-            <button type="submit">Register for the trip!</button>
+            <button class="btn" type="submit">Register for the trip!</button>
           </div>
-          <input type="hidden" value="Request to join the mission">
+          <input type="hidden" name="_subject" value="Request to join the mission">
         </fieldset>
       </form>
 

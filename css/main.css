@@ -1,6 +1,7 @@
 html {
   font-family: "Open Sans", sans-serif;
   background-color: #f2f2f2;
+  color: #000;
 }
 
 button {
@@ -8,7 +9,20 @@ button {
 }
 
 h1 {
-  border-bottom: 3;
-  border-width: 1rem;
-  border-color: #000;
+  border: 1px solid black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+section {
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 60em) {
+
+  .psh {
+    padding-right: .5rem;
+  }
+
 }
